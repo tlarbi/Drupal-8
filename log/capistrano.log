@@ -1,0 +1,233 @@
+# Logfile created on 2016-09-16 12:40:21 +0200 by logger.rb/54072
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-16 12:40:21 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [65400d50] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [65400d50] Command: /usr/bin/env mkdir -p /tmp
+  INFO [ea160994] Running /usr/bin/env #<StringIO:0x00000001375220> /tmp/git-ssh-My_Drupal_project-production-tarik.sh as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [ea160994] Command: /usr/bin/env #<StringIO:0x00000001375220> /tmp/git-ssh-My_Drupal_project-production-tarik.sh
+  INFO [a043c71c] Running /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [a043c71c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh
+  INFO [d763f187] Running /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d763f187] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git )
+  INFO [54228de6] Running /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [54228de6] Command: /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases
+ DEBUG [90e7d77b] Running [ -f /var/www/drupal-8/current/REVISION ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [90e7d77b] Command: [ -f /var/www/drupal-8/current/REVISION ]
+ DEBUG [052d18b8] Running /usr/bin/env cat /var/www/drupal-8/current/REVISION 2>/dev/null as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [052d18b8] Command: /usr/bin/env cat /var/www/drupal-8/current/REVISION 2>/dev/null
+ DEBUG [41ac1054] Running [ -f /var/www/drupal-8/repo/HEAD ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [41ac1054] Command: [ -f /var/www/drupal-8/repo/HEAD ]
+  INFO The repository mirror is at /var/www/drupal-8/repo
+ DEBUG [8cefb809] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [8cefb809] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+  INFO [35fd19f7] Running /usr/bin/env git remote update --prune as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [35fd19f7] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [67c301b6] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [67c301b6] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+  INFO [d604a48d] Running /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916104021 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d604a48d] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916104021 )
+  INFO [7e548d8c] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916104021 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [7e548d8c] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916104021 )
+ DEBUG [2e60fcde] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [2e60fcde] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [f5ddce9b] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [f5ddce9b] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [d00a9272] Running if test ! -d /var/www/drupal-8/releases/20160916104021; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916104021'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d00a9272] Command: if test ! -d /var/www/drupal-8/releases/20160916104021; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916104021'" 1>&2; false; fi
+  INFO [bba1e46e] Running /usr/bin/env echo "" >> REVISION as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [bba1e46e] Command: cd /var/www/drupal-8/releases/20160916104021 && /usr/bin/env echo "" >> REVISION
+  INFO [90744b9d] Running /usr/bin/env ln -s /var/www/drupal-8/releases/20160916104021 /var/www/drupal-8/releases/current as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [90744b9d] Command: /usr/bin/env ln -s /var/www/drupal-8/releases/20160916104021 /var/www/drupal-8/releases/current
+  INFO [447fec76] Running /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [447fec76] Command: /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8
+ DEBUG [99c8b3f4] Running /usr/bin/env ls -xtr /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [99c8b3f4] Command: /usr/bin/env ls -xtr /var/www/drupal-8/releases
+ DEBUG [6b7e4aaf] Running if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [6b7e4aaf] Command: if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi
+  INFO [e3b7919a] Running /usr/bin/env echo "Branch master (at ) deployed as release 20160916104021 by tarik" >> /var/www/drupal-8/revisions.log as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [e3b7919a] Command: cd /var/www/drupal-8/releases && /usr/bin/env echo "Branch master (at ) deployed as release 20160916104021 by tarik" >> /var/www/drupal-8/revisions.log
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-16 12:40:27 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [7e3ab9c0] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [7e3ab9c0] Command: /usr/bin/env mkdir -p /tmp
+  INFO [7e3ab9c0] Finished in 0.663 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 0.0%
+  INFO Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 100.0%
+  INFO [6e5ee440] Running /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [6e5ee440] Command: /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh
+  INFO [6e5ee440] Finished in 0.060 seconds with exit status 0 (successful).
+  INFO [997cf294] Running /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [997cf294] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git )
+ DEBUG [997cf294] 	ace243c3aabddee65cb1148ed003bd9746671cdf	refs/heads/master
+  INFO [997cf294] Finished in 0.682 seconds with exit status 0 (successful).
+  INFO [a2b7aff4] Running /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [a2b7aff4] Command: /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases
+ DEBUG [a2b7aff4] 	mkdir: cannot create directory '/var/www/drupal-8/shared': Permission denied
+mkdir: cannot create directory '/var/www/drupal-8/releases': Permission denied
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-16 12:41:01 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [d33c9bca] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d33c9bca] Command: /usr/bin/env mkdir -p /tmp
+  INFO [d33c9bca] Finished in 0.594 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 0.0%
+  INFO Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 100.0%
+  INFO [abd97d2f] Running /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [abd97d2f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh
+  INFO [abd97d2f] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [a47654e1] Running /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [a47654e1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git )
+ DEBUG [a47654e1] 	ace243c3aabddee65cb1148ed003bd9746671cdf	refs/heads/master
+  INFO [a47654e1] Finished in 1.189 seconds with exit status 0 (successful).
+  INFO [59e90dbb] Running /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [59e90dbb] Command: /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases
+  INFO [59e90dbb] Finished in 0.061 seconds with exit status 0 (successful).
+ DEBUG [94777532] Running [ -f /var/www/drupal-8/current/REVISION ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [94777532] Command: [ -f /var/www/drupal-8/current/REVISION ]
+ DEBUG [94777532] Finished in 0.053 seconds with exit status 1 (failed).
+ DEBUG [00a325a0] Running [ -f /var/www/drupal-8/repo/HEAD ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [00a325a0] Command: [ -f /var/www/drupal-8/repo/HEAD ]
+ DEBUG [00a325a0] Finished in 0.053 seconds with exit status 1 (failed).
+ DEBUG [09adbf81] Running if test ! -d /var/www/drupal-8; then echo "Directory does not exist '/var/www/drupal-8'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [09adbf81] Command: if test ! -d /var/www/drupal-8; then echo "Directory does not exist '/var/www/drupal-8'" 1>&2; false; fi
+ DEBUG [09adbf81] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [b11fa0a6] Running /usr/bin/env git clone --mirror https://github.com/tlarbi/Drupal-8.git /var/www/drupal-8/repo as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [b11fa0a6] Command: cd /var/www/drupal-8 && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git clone --mirror https://github.com/tlarbi/Drupal-8.git /var/www/drupal-8/repo )
+ DEBUG [b11fa0a6] 	Cloning into bare repository '/var/www/drupal-8/repo'...
+  INFO [b11fa0a6] Finished in 2.140 seconds with exit status 0 (successful).
+ DEBUG [ce6e8eef] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [ce6e8eef] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [ce6e8eef] Finished in 0.086 seconds with exit status 0 (successful).
+  INFO [41658653] Running /usr/bin/env git remote update --prune as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [41658653] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [41658653] 	Fetching origin
+  INFO [41658653] Finished in 0.777 seconds with exit status 0 (successful).
+ DEBUG [5469d996] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [5469d996] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [5469d996] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [a4b31c86] Running /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916104104 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [a4b31c86] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916104104 )
+  INFO [a4b31c86] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [269cbb80] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916104104 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [269cbb80] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916104104 )
+  INFO [269cbb80] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [0a53c633] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [0a53c633] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [0a53c633] Finished in 0.059 seconds with exit status 0 (successful).
+ DEBUG [975b1e89] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [975b1e89] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [975b1e89] 	ace243c3aabddee65cb1148ed003bd9746671cdf
+ DEBUG [975b1e89] Finished in 0.057 seconds with exit status 0 (successful).
+ DEBUG [90b65dd2] Running if test ! -d /var/www/drupal-8/releases/20160916104104; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916104104'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [90b65dd2] Command: if test ! -d /var/www/drupal-8/releases/20160916104104; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916104104'" 1>&2; false; fi
+ DEBUG [90b65dd2] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [a4883b77] Running /usr/bin/env echo "ace243c3aabddee65cb1148ed003bd9746671cdf" >> REVISION as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [a4883b77] Command: cd /var/www/drupal-8/releases/20160916104104 && /usr/bin/env echo "ace243c3aabddee65cb1148ed003bd9746671cdf" >> REVISION
+  INFO [a4883b77] Finished in 0.069 seconds with exit status 0 (successful).
+  INFO [033e2604] Running /usr/bin/env ln -s /var/www/drupal-8/releases/20160916104104 /var/www/drupal-8/releases/current as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [033e2604] Command: /usr/bin/env ln -s /var/www/drupal-8/releases/20160916104104 /var/www/drupal-8/releases/current
+  INFO [033e2604] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [ed059a28] Running /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [ed059a28] Command: /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8
+  INFO [ed059a28] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [2b9c0dc3] Running /usr/bin/env ls -xtr /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [2b9c0dc3] Command: /usr/bin/env ls -xtr /var/www/drupal-8/releases
+ DEBUG [2b9c0dc3] 	20160916104104
+ DEBUG [2b9c0dc3] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [6f7c4951] Running if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [6f7c4951] Command: if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi
+ DEBUG [6f7c4951] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO [77cd0830] Running /usr/bin/env echo "Branch master (at ace243c3aabddee65cb1148ed003bd9746671cdf) deployed as release 20160916104104 by tarik" >> /var/www/drupal-8/revisions.log as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [77cd0830] Command: cd /var/www/drupal-8/releases && /usr/bin/env echo "Branch master (at ace243c3aabddee65cb1148ed003bd9746671cdf) deployed as release 20160916104104 by tarik" >> /var/www/drupal-8/revisions.log
+  INFO [77cd0830] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2016-09-16 13:14:36 +0200 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [97f69f88] Running /usr/bin/env mkdir -p /tmp as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [97f69f88] Command: /usr/bin/env mkdir -p /tmp
+  INFO [97f69f88] Finished in 0.635 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 0.0%
+  INFO Uploading /tmp/git-ssh-My_Drupal_project-production-tarik.sh 100.0%
+  INFO [112d2bff] Running /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [112d2bff] Command: /usr/bin/env chmod 700 /tmp/git-ssh-My_Drupal_project-production-tarik.sh
+  INFO [112d2bff] Finished in 0.059 seconds with exit status 0 (successful).
+  INFO [338dacfd] Running /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [338dacfd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git ls-remote --heads https://github.com/tlarbi/Drupal-8.git )
+ DEBUG [338dacfd] 	ace243c3aabddee65cb1148ed003bd9746671cdf	refs/heads/master
+  INFO [338dacfd] Finished in 0.672 seconds with exit status 0 (successful).
+  INFO [29e73b80] Running /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [29e73b80] Command: /usr/bin/env mkdir -p /var/www/drupal-8/shared /var/www/drupal-8/releases
+  INFO [29e73b80] Finished in 0.062 seconds with exit status 0 (successful).
+  INFO [72a14449] Running /usr/bin/env mkdir -p /var/www/drupal-8/shared/web/sites/default/files as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [72a14449] Command: /usr/bin/env mkdir -p /var/www/drupal-8/shared/web/sites/default/files
+  INFO [72a14449] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [f4061f0e] Running [ -f /var/www/drupal-8/current/REVISION ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [f4061f0e] Command: [ -f /var/www/drupal-8/current/REVISION ]
+ DEBUG [f4061f0e] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [7ec90932] Running /usr/bin/env cat /var/www/drupal-8/current/REVISION 2>/dev/null as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [7ec90932] Command: /usr/bin/env cat /var/www/drupal-8/current/REVISION 2>/dev/null
+ DEBUG [7ec90932] 	ace243c3aabddee65cb1148ed003bd9746671cdf
+ DEBUG [7ec90932] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [9304aeb3] Running [ -f /var/www/drupal-8/repo/HEAD ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [9304aeb3] Command: [ -f /var/www/drupal-8/repo/HEAD ]
+ DEBUG [9304aeb3] Finished in 0.052 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/drupal-8/repo
+ DEBUG [8253e0f0] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [8253e0f0] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [8253e0f0] Finished in 0.055 seconds with exit status 0 (successful).
+  INFO [edf5876a] Running /usr/bin/env git remote update --prune as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [edf5876a] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [edf5876a] 	Fetching origin
+  INFO [edf5876a] Finished in 0.682 seconds with exit status 0 (successful).
+ DEBUG [d7a5afc1] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d7a5afc1] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [d7a5afc1] Finished in 0.061 seconds with exit status 0 (successful).
+  INFO [8f15f36a] Running /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916111438 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [8f15f36a] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916111438 )
+  INFO [8f15f36a] Finished in 0.057 seconds with exit status 0 (successful).
+  INFO [bdff033f] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916111438 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [bdff033f] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/drupal-8/releases/20160916111438 )
+  INFO [bdff033f] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG [4a9791f9] Running if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [4a9791f9] Command: if test ! -d /var/www/drupal-8/repo; then echo "Directory does not exist '/var/www/drupal-8/repo'" 1>&2; false; fi
+ DEBUG [4a9791f9] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [c07d2c90] Running /usr/bin/env git rev-list --max-count=1 master as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [c07d2c90] Command: cd /var/www/drupal-8/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-My_Drupal_project-production-tarik.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [c07d2c90] 	ace243c3aabddee65cb1148ed003bd9746671cdf
+ DEBUG [c07d2c90] Finished in 0.066 seconds with exit status 0 (successful).
+ DEBUG [f1bb0271] Running if test ! -d /var/www/drupal-8/releases/20160916111438; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916111438'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [f1bb0271] Command: if test ! -d /var/www/drupal-8/releases/20160916111438; then echo "Directory does not exist '/var/www/drupal-8/releases/20160916111438'" 1>&2; false; fi
+ DEBUG [f1bb0271] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [bc83a310] Running /usr/bin/env echo "ace243c3aabddee65cb1148ed003bd9746671cdf" >> REVISION as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [bc83a310] Command: cd /var/www/drupal-8/releases/20160916111438 && /usr/bin/env echo "ace243c3aabddee65cb1148ed003bd9746671cdf" >> REVISION
+  INFO [bc83a310] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [7b40b225] Running /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916111438/web/sites/default as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [7b40b225] Command: /usr/bin/env mkdir -p /var/www/drupal-8/releases/20160916111438/web/sites/default
+  INFO [7b40b225] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [589fa782] Running [ -L /var/www/drupal-8/releases/20160916111438/web/sites/default/files ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [589fa782] Command: [ -L /var/www/drupal-8/releases/20160916111438/web/sites/default/files ]
+ DEBUG [589fa782] Finished in 0.053 seconds with exit status 1 (failed).
+ DEBUG [db444d38] Running [ -d /var/www/drupal-8/releases/20160916111438/web/sites/default/files ] as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [db444d38] Command: [ -d /var/www/drupal-8/releases/20160916111438/web/sites/default/files ]
+ DEBUG [db444d38] Finished in 0.052 seconds with exit status 1 (failed).
+  INFO [b8beaffa] Running /usr/bin/env ln -s /var/www/drupal-8/shared/web/sites/default/files /var/www/drupal-8/releases/20160916111438/web/sites/default/files as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [b8beaffa] Command: /usr/bin/env ln -s /var/www/drupal-8/shared/web/sites/default/files /var/www/drupal-8/releases/20160916111438/web/sites/default/files
+  INFO [b8beaffa] Finished in 0.051 seconds with exit status 0 (successful).
+  INFO [524ea9b4] Running /usr/bin/env ln -s /var/www/drupal-8/releases/20160916111438 /var/www/drupal-8/releases/current as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [524ea9b4] Command: /usr/bin/env ln -s /var/www/drupal-8/releases/20160916111438 /var/www/drupal-8/releases/current
+  INFO [524ea9b4] Finished in 0.056 seconds with exit status 0 (successful).
+  INFO [5dfa3e37] Running /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8 as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [5dfa3e37] Command: /usr/bin/env mv /var/www/drupal-8/releases/current /var/www/drupal-8
+  INFO [5dfa3e37] Finished in 0.054 seconds with exit status 0 (successful).
+ DEBUG [d48c13a4] Running /usr/bin/env ls -xtr /var/www/drupal-8/releases as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [d48c13a4] Command: /usr/bin/env ls -xtr /var/www/drupal-8/releases
+ DEBUG [d48c13a4] 	20160916104104	20160916111438
+ DEBUG [d48c13a4] Finished in 0.052 seconds with exit status 0 (successful).
+ DEBUG [2bb89ca0] Running if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [2bb89ca0] Command: if test ! -d /var/www/drupal-8/releases; then echo "Directory does not exist '/var/www/drupal-8/releases'" 1>&2; false; fi
+ DEBUG [2bb89ca0] Finished in 0.053 seconds with exit status 0 (successful).
+  INFO [5913d7cd] Running /usr/bin/env echo "Branch master (at ace243c3aabddee65cb1148ed003bd9746671cdf) deployed as release 20160916111438 by tarik" >> /var/www/drupal-8/revisions.log as ubuntu@ec2-52-58-37-166.eu-central-1.compute.amazonaws.com
+ DEBUG [5913d7cd] Command: cd /var/www/drupal-8/releases && /usr/bin/env echo "Branch master (at ace243c3aabddee65cb1148ed003bd9746671cdf) deployed as release 20160916111438 by tarik" >> /var/www/drupal-8/revisions.log
+  INFO [5913d7cd] Finished in 0.058 seconds with exit status 0 (successful).
